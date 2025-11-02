@@ -8,6 +8,22 @@ E-Ink Stats is a monorepo for displaying analytics and metrics on a 7.3" e-ink d
 
 ## Critical Constraints
 
+### Git Workflow - MANDATORY
+**ALL changes MUST go through pull requests. Direct commits to `main` are blocked by branch protection rules.**
+
+When making changes:
+1. Create a new branch: `git checkout -b feature/your-feature-name` or `git checkout -b fix/bug-description`
+2. Make your changes and commit
+3. Push branch: `git push -u origin your-branch-name`
+4. Create a pull request via GitHub
+5. **NEVER use `--no-verify` flag** - pre-commit hooks must always run
+
+Branch naming conventions:
+- Features: `feature/description`
+- Fixes: `fix/description`
+- Docs: `docs/description`
+- Refactoring: `refactor/description`
+
 ### E-Ink Display Dimensions
 **All frontend components MUST be designed for 800×480 pixels (7.3" display, 5:3 aspect ratio).**
 
