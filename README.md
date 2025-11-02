@@ -153,3 +153,9 @@ pnpm lefthook run pre-commit
 2. Ensure pre-commit hooks pass
 3. Run tests (when available)
 4. Create a pull request
+
+## License
+
+MIT License - Copyright (c) 2025 Scott Frasso
+
+See [LICENSE](LICENSE) file for details.

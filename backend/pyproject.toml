@@ -2,6 +2,8 @@
 name = "e-ink-stats-api"
 version = "0.1.0"
 description = "E-Ink Stats API - Backend for analytics display on e-ink screens"
+authors = [{name = "Scott Frasso"}]
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
