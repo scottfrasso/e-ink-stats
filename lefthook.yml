@@ -1,0 +1,24 @@
+pre-commit:
+  parallel: true
+  commands:
+    frontend-biome:
+      root: "frontend/"
+      glob: "*.{ts,tsx,js,jsx}"
+      run: pnpm biome check --write {staged_files}
+      stage_fixed: true
+
+    backend-ruff-format:
+      root: "backend/"
+      glob: "*.py"
+      run: uv run ruff format {staged_files}
+      stage_fixed: true
+
+    backend-ruff-check:
+      root: "backend/"
+      glob: "*.py"
+      run: uv run ruff check {staged_files}
+
+    backend-mypy:
+      root: "backend/"
+      glob: "*.py"
+      run: uv run mypy backend
