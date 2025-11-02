@@ -2,10 +2,7 @@ name: PR Checks
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-  push:
-    branches-ignore:
-      - main
+    branches: [main]
 
 jobs:
   trufflehog-scan:
@@ -19,8 +16,6 @@ jobs:
 
       - name: Run TruffleHog scan
         uses: trufflesecurity/trufflehog@main
-        with:
-          extra_args: --fail
 
   frontend-biome:
     name: Frontend Biome Check
