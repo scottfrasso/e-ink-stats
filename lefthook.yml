@@ -1,6 +1,9 @@
 pre-commit:
   parallel: true
   commands:
+    trufflehog-scan:
+      run: trufflehog git file://. --fail
+
     frontend-biome:
       root: "frontend/"
       glob: "*.{ts,tsx,js,jsx}"

@@ -121,6 +121,7 @@ uv run mypy backend    # Type check
 
 This project uses lefthook for pre-commit hooks:
 
+- **TruffleHog**: Secret scanning across entire repository (prevents committing secrets)
 - **Frontend**: Biome check and format
 - **Backend**: Ruff format, Ruff check, mypy type checking
 
@@ -129,6 +130,8 @@ Hooks run automatically on commit. To manually run:
 ```bash
 pnpm lefthook run pre-commit
 ```
+
+**Requirements**: TruffleHog must be installed (`brew install trufflehog`)
 
 ## Development Workflow
 
