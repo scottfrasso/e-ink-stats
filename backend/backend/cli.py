@@ -3,8 +3,8 @@
 import typer
 
 app = typer.Typer(
-    name="e-ink-backend",
-    help="E-Ink Display Backend CLI",
+    name="e-ink-stats",
+    help="E-Ink Stats CLI",
 )
 
 

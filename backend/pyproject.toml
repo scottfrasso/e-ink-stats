@@ -1,7 +1,7 @@
 [project]
-name = "backend"
+name = "e-ink-stats-api"
 version = "0.1.0"
-description = "Add your description here"
+description = "E-Ink Stats API - Backend for analytics display on e-ink screens"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

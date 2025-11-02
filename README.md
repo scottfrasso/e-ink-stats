@@ -1,6 +1,6 @@
-# E-Ink Display Project
+# E-Ink Stats
 
-A monorepo project for rendering metrics data on e-ink displays, featuring a React frontend with Storybook and a Python FastAPI/Typer backend.
+A monorepo project for displaying analytics and metrics on e-ink displays, featuring a React frontend with Storybook and a Python FastAPI/Typer backend.
 
 ## E-Ink Display Specifications
 
@@ -13,7 +13,7 @@ All frontend components are designed to render within these fixed dimensions. Us
 ## Project Structure
 
 ```
-e-ink-project/
+e-ink-stats/
 ├── frontend/          # Vite + React + TypeScript + Storybook
 ├── backend/           # Python FastAPI/Typer application
 ├── lefthook.yml       # Pre-commit hooks configuration

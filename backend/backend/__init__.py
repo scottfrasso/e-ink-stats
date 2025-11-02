@@ -1,1 +1,1 @@
-"""E-Ink Display Backend Application."""
+"""E-Ink Stats Backend Application."""
