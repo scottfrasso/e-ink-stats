@@ -2,6 +2,14 @@
 
 A monorepo project for rendering metrics data on e-ink displays, featuring a React frontend with Storybook and a Python FastAPI/Typer backend.
 
+## E-Ink Display Specifications
+
+**Target Display**: 7.3" E-Ink Display
+**Resolution**: 800 × 480 pixels
+**Aspect Ratio**: 5:3
+
+All frontend components are designed to render within these fixed dimensions. Use the `DisplayFrame` component as a container to ensure proper sizing.
+
 ## Project Structure
 
 ```
@@ -41,7 +49,27 @@ Components are located in `frontend/src/components/`. Each component includes:
 - TypeScript implementation
 - Storybook stories for documentation and visual testing
 
-Example: `MetricCard` - A component designed for e-ink displays that shows metric data.
+#### DisplayFrame
+Container component that enforces the 800×480 pixel constraint for the 7.3" e-ink display. All components should be developed and tested within this frame.
+
+```tsx
+import { DisplayFrame } from './components/DisplayFrame'
+
+<DisplayFrame>
+  {/* Your content here */}
+</DisplayFrame>
+```
+
+#### MetricCard
+A component designed for e-ink displays that shows metric data. Default size is optimized for a 2×2 grid layout within the display frame (360×216 pixels).
+
+```tsx
+<MetricCard
+  title="Active Users"
+  value={1234}
+  unit="K"
+/>
+```
 
 ## Backend
 

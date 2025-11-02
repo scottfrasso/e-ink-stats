@@ -10,8 +10,8 @@ export function MetricCard({
 	title,
 	value,
 	unit,
-	width = 300,
-	height = 200,
+	width = 360,
+	height = 216,
 }: MetricCardProps) {
 	return (
 		<div

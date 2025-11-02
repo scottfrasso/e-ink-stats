@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
+import { DisplayFrame } from "./DisplayFrame"
 import { MetricCard } from "./MetricCard"
 
 const meta = {
@@ -49,4 +50,27 @@ export const SmallCard: Story = {
 		width: 200,
 		height: 150,
 	},
+}
+
+export const InDisplayFrame: Story = {
+	args: {
+		title: "Active Users",
+		value: 1234,
+	},
+	decorators: [
+		(Story) => (
+			<DisplayFrame>
+				<div
+					style={{
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						height: "100%",
+					}}
+				>
+					<Story />
+				</div>
+			</DisplayFrame>
+		),
+	],
 }
